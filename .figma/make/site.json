@@ -1,0 +1,10 @@
+{
+  "description": "A campus community platform where students discover ideas, find teammates, build projects, and connect with learning and mentorship opportunities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
