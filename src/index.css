@@ -2486,6 +2486,7 @@
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--line);
+  overflow: hidden;
 }
 .dash-brand {
   padding: 0 12px 38px;
@@ -2516,6 +2517,10 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 .dash-sidebar nav button {
   min-height: 37px;
@@ -3568,6 +3573,10 @@
   box-shadow: 0 22px 60px rgba(37, 31, 82, 0.08);
   backdrop-filter: blur(18px);
 }
+.premium-dashboard .dash-sidebar nav {
+  flex: 1;
+  padding-right: 2px;
+}
 .premium-dashboard .dash-brand {
   padding: 8px 10px 32px;
 }
@@ -3660,6 +3669,27 @@
   height: 84px;
   border: 0;
   background: transparent;
+}
+.premium-dashboard .dash-topbar {
+  box-sizing: border-box;
+  min-width: 0;
+}
+.premium-dashboard .dash-topbar > div:last-child {
+  min-width: 0;
+  flex-shrink: 1;
+  justify-content: flex-end;
+}
+.premium-dashboard .user-chip {
+  min-width: 0;
+  max-width: 180px;
+  white-space: nowrap;
+}
+.premium-dashboard .user-chip i {
+  flex: 0 0 30px;
+}
+.premium-dashboard .user-chip {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .premium-dashboard .dash-scroll {
   height: calc(100vh - 84px);
